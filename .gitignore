@@ -1,0 +1,12 @@
+*.sw?
+.DS_Store
+.Python
+/*.csv
+/.vagrant
+/bin
+/include
+/lib
+/man
+/share
+/tags
+/uids
