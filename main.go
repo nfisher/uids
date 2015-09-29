@@ -56,6 +56,7 @@ func main() {
 ) ENGINE=innodb`
 
 	case "uuid":
+		fn = UuidInsert
 		tableStatement = `CREATE TEMPORARY TABLE uuid (
   id BINARY(16),
   PRIMARY KEY (id)
@@ -144,7 +145,7 @@ func IdInsert(db *sql.DB, insertCount int) {
 }
 
 func UuidInsert(db *sql.DB, insertCount int) {
-	statement, err := db.Prepare("INSERT INTO id VALUES (?)")
+	statement, err := db.Prepare("INSERT INTO uuid VALUES (?)")
 	if err != nil {
 		log.Fatal(err)
 	}
