@@ -51,7 +51,7 @@ func main() {
 	case "id":
 		fn = IdInsert
 		tableStatement = `CREATE TEMPORARY TABLE id (
-  id INT(32),
+  id INTEGER,
   PRIMARY KEY (id)
 ) ENGINE=innodb`
 
